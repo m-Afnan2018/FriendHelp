@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    background-image:linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+.active{
+    transform: scale(1);
+}
+
+.search_city::placeholder {
+    color: #dedede;
+    font-weight: 600;
+}
+.search_city:focus {
+    outline: 3px solid #ccc;
+}
+
+.tab_container .current_tab {
+    background-color: rgba(219, 226, 239, 0.5);
+}
+
+.grant_location_container.active{
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.search_form_container.active {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.loading_container.active {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.show_weather_info_container.active {
+    display: grid;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.not_found_container.active {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}

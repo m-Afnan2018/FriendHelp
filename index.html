@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="container" class="h-[100vh] w-[100vw] pt-[10px]">
+
+        <h1 class=" text-[1.9rem] text-center font-bold tracking-wider text-white uppercase">Weather App</h1>
+
+        <!-- container for "your-weather and search-weather" -->
+        <div class="tab_container      max-w-[550px] w-[90%] flex justify-between mt-[4rem] mx-auto">
+            <p class="your_weather       rounded-md text-white text-[0.85rem] tracking-widest font-medium cursor-pointer pt-[0.15rem] pb-[0.15rem] pl-[0.35rem] pr-[0.3rem]">Your Weather</p>
+            <p class="search_weather     rounded-md text-white text-[0.85rem] tracking-widest font-medium cursor-pointer pt-[0.15rem] pb-[0.15rem] pl-[0.3rem] pr-[0.3rem]">Search Weather</p>
+        </div>
+
+        <!-- Grant Location container -->
+        <div class="grant_location_container      mt-[4rem] hidden flex-col justify-center items-center mb-[3rem] ">
+            <img src="./assets/location.png" alt="" loading="lazy" class="location_image mb-[2rem]" width="80" height="80">
+            <h2 class="grant_location_access      text-white text-[1.92rem] font-semibold mb-[0.5rem]">Grant Location Access</h2>
+            <p class="grant_location_sub_text      text-white text-[0.95rem] tracking-wider">Allow Access To Get Weather Information</p>
+            <button class="grant_access_button      mt-[2rem] pt-[0.6rem] pb-[0.6rem] pl-[2.1rem] pr-[2.1rem] text-white bg-[#3f72af] rounded-md uppercase text-sm font-medium">Grant Access</button>
+        </div>
+
+        <!-- Search form container -->
+        <form class="search_form_container      w-[90%] max-w-[550px] hidden justify-between align-center opacity-0 scale-[0] mt-[2rem]  mx-auto">
+            <input type="text" placeholder="Search for a city ... " required class="search_city       pt-[0.5rem] pb-[0.5rem] pl-[1.2rem] w-[90%] rounded-xl bg-[#dbe2ef80] text-white text-[1.1rem]">
+
+            <button type="submit" class="search_button     w-[8%] flex justify-center items-center rounded-full bg-[#3f72af]">
+                <img src="./assets/search.png" alt="" loading="lazy" class="magnifying_glass_image" width="20" height="20">
+            </button>
+        </form>
+
+        <!-- Loading container -->
+        <div class="loading_container     hidden flex-col justify-center items-center opacity-0 scale-[0] mt-[4rem] ">
+            <img src="./assets/loading.gif" alt="" loading="lazy" class="loading_gif" width="150" height="150">
+            <p class="loading     text-white text-[1.2rem] font-medium uppercase">Loading</p>
+        </div>
+
+        <!-- display weather information container -->
+        <div class="show_weather_info_container   hidden place-items-center w-[90%] mx-auto max-w-[1000px] opacity-0 scale-[0] text-white mt-[4rem]">
+            <!-- city and country flag container -->
+            <div class="city_and_country_flag_container flex gap-[10px] mb-[1rem]">
+                <p class="city_name text-[2.5rem]"></p>
+                <img src="" alt="" class="country_icon   object-contain " width="30" loading="lazy">
+            </div>
+
+            <!-- weather type -->
+            <p class="weather_type text-[1.5rem] "></p>
+
+            <!-- weather image -->
+            <img src="" alt="" class="weather_image " width="90" height="90">
+
+            <!-- temperature -->
+            <p class="temperature text-[3rem] mb-[1rem] font-semibold"></p>
+
+            <!-- weather conditions card container -->
+            <div class="conditions_card_container     flex justify-center items-center w-[90%] gap-[20px] text-white">
+                <!-- wind speed card -->
+                <div class="windspeed     bg-[#dbe2ef80] w-[22%] rounded-md flex flex-col justify-center items-center p-[0.5rem]">
+                    <img src="./assets/wind.png" alt="" loading="lazy" class="windspeed_image" width="50" height="50">
+                    <p class="text-[1.75rem] uppercase">Windspeed</p>
+                    <p class="speed_of_wind  text-[1.75rem]   "></p>
+                </div>
+
+                <!-- humidity card -->
+                <div class="humidity     bg-[#dbe2ef80] w-[22%] rounded-md flex flex-col justify-center items-center p-[0.5rem]">
+                    <img src="./assets/humidity.png" alt="" loading="lazy" class="humidity_image" width="50" height="50">
+                    <p class="text-[1.75rem] uppercase">Humidity</p>
+                    <p class="humidity_percentage text-[1.75rem]"></p>
+                </div>
+
+                <!-- clouds card -->
+                <div class="clouds     bg-[#dbe2ef80] w-[22%] rounded-md flex flex-col justify-center items-center p-[0.5rem]">
+                    <img src="./assets/cloud.png" alt="" loading="lazy" class="cloud_image" width="50" height="50">
+                    <p class="text-[1.75rem] uppercase">Clouds</p>
+                    <p class="clouds_percentage text-[1.75rem]"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Not found container -->
+        <div class="not_found_container     hidden opacity-0 flex-col justify-center items-center scale-0 mt-[2rem]">
+            <img src="./assets/not-found.png" alt="" loading="lazy" width="300">
+            <p class="text-[1rem] text-white mt-[1rem]">City not found..</p>
+        </div>
+
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
